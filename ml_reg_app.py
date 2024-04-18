@@ -11,8 +11,8 @@ import streamlit.components.v1 as components
 #---------------------------------------------------------------------------------------------------------------------------------
 from streamlit_extras.stoggle import stoggle
 #from mitosheet.streamlit.v1 import spreadsheet
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+#from ydata_profiling import ProfileReport
+#from streamlit_pandas_profiling import st_profile_report
 #----------------------------------------
 import os
 import time
@@ -66,7 +66,7 @@ import sweetviz as sv
 import shap
 #from streamlit_shap import st_shap
 #from mitosheet.streamlit.v1 import spreadsheet
-from st_aggrid import AgGrid
+#from st_aggrid import AgGrid
 #----------------------------------------
 # importing pages
 #from degn_ewatch_eda import degn_ewatch_eda
@@ -85,16 +85,16 @@ from sklearn.cluster import KMeans
 #image = Image.open('Image_Clariant.png')
 st.set_page_config(page_title="Regression App | v1.0",
                    layout="wide",
-                   page_icon='https://www.clariant.com/images/clariant-logo-small.svg',                    
+                   #page_icon=               
                    initial_sidebar_state="collapsed")
-#st.sidebar.image(image, use_column_width='auto') 
 #----------------------------------------
 st.title("ML | Regression App | v1.0")
-st.markdown('Created by | <a href="mailto:avijit.chakraborty@clariant.com">Avijit Chakraborty</a>', 
+st.markdown('Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a>', 
             unsafe_allow_html=True)
-st.info('*Disclaimer : This app is created for internal use, unauthorized uses or copying is strictly prohibited.*', icon="ℹ️")
+st.info('**Disclaimer : :blue[Thank you for visiting the app] | Unauthorized uses or copying of the app is strictly prohibited | Click the :blue[sidebar] to follow the instructions to start the applications.**', icon="ℹ️")
 #----------------------------------------
 # Set the background image
+st.divider()
 #---------------------------------------------------------------------------------------------------------------------------------
 stats_expander = st.expander("**Knowledge**", expanded=False)
 with stats_expander: 
@@ -107,14 +107,14 @@ st.divider()
 #---------------------------------------------------------------------------------------------------------------------------------
 ### Feature Import
 #---------------------------------------------------------------------------------------------------------------------------------
-st.sidebar.header("1. Input Data", divider='blue')
-st.sidebar.info('Please upload the data to start the application.', icon="ℹ️")
-data_source = st.sidebar.radio("**1.1 Select Data Source**", ["Local Machine", "Server Path"])
+st.sidebar.header("Contents", divider='blue')
+st.sidebar.info('Please choose from the following options and follow the instructions to start the application.', icon="ℹ️")
+data_source = st.sidebar.radio("**:blue[Select Data Source]**", ["Local Machine", "Server Path"])
 #---------------------------------------------------------------------------------------------------------------------------------
 
 if data_source == "Local Machine" :
     
-    file1 = st.sidebar.file_uploader("**1.2 Choose a file**",
+    file1 = st.sidebar.file_uploader("**:blue[Choose a file]**",
                                 type=["xlsx","csv"],
                                 accept_multiple_files=True,
                                 key=0)
