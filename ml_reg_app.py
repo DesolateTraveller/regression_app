@@ -21,8 +21,8 @@ warnings.filterwarnings("ignore")
 from PIL import Image
 from random import randint
 #----------------------------------------
-import boto3
-from botocore.exceptions import NoCredentialsError
+#import boto3
+#from botocore.exceptions import NoCredentialsError
 #----------------------------------------
 import numpy as np
 import pandas as pd
@@ -34,7 +34,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 #----------------------------------------
-import pickle
+#import pickle
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, mean_absolute_error
@@ -69,8 +69,6 @@ import shap
 #from st_aggrid import AgGrid
 #----------------------------------------
 # importing pages
-#from degn_ewatch_eda import degn_ewatch_eda
-#from degn_ewatch_model import degn_ewatch_model
 #----------------------------------------
 import pygwalker as pyg
 import streamlit.components.v1 as components
